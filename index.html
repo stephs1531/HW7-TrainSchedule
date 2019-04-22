@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Timesheet Phrase - 1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+</head>
+<body>
+        <!-- ----------------------------- jumbotron header --------------------------------------- -->
+        <div class="container">
+            <div class="jumbotron">
+                <h1 class="text-center">Train Schedule</h1>
+                <h3 class="text-center">A Complete Schedule of Train Arrivals and Departures</h3>
+            </div>
+            
+        <!-- ------------------------------ train schedule ------------------------     -->
+            <div class="card">
+                <div class="card-header">
+                    Scheduled Trains
+                </div>
+                <div class="card-body">
+                    <table class="table" id="train-table">
+                        <thead>
+                            <tr>
+                            <th scope="col">Train</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">First Train Time</th>
+                            <th scope="col">Frequency</th>
+                            <th scope="col">Next Train Time</th>
+                            <th scope="col">Minutes to Arrival</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                        </table>
+                </div>
+            </div>
+            
+    <br>
+
+    <!-- ----------------------------------- add train form -------------------------------- -->
+    <div class="card">
+        <div class="card-header">
+            Add New Train
+        </div>
+        <div class="card-body">   
+            <div class="form-body">
+                    <form onsubmit="return false">
+                      <div class="form-group row">
+                        <label for="employee-name">Train Name</label>
+                        <input class="form-control" id="employee-name" type="text">
+                      </div>
+                      <div class="form-group row">
+                        <label for="role">Destination</label>
+                        <input class="form-control" id="role" type="text">
+                      </div>
+    
+                      <div class="form-group row">
+                        <label for="start-date">First Train Time (Military Time)</label>
+                        <input class="form-control" id="start-date" type="text">
+                      </div>
+                      <div class="form-group row">
+                            <label for="monthly_rate">Frequency (in minutes)</label>
+                            <input class="form-control" id="monthly-rate" type="number">
+                          </div>
+                      <button class="btn btn-primary" id="submit-info" type="submit">Submit</button>
+                    </form>
+                  </div>
+        </div>
+    </div>
+
+    <!-- --------------------------------- javascript links ---------------------------------- -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
