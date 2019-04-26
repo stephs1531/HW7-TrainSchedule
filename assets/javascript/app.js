@@ -60,7 +60,7 @@ var config = {
 
             var trainName = child.val().trainName;
             var destination = child.val().destination;
-            var firstTrainTime = child.val().firstTrainTime;
+            var dataTrainTime = child.val().firstTrainTime;
             var frequency = child.val().frequency;
        
 
@@ -73,10 +73,14 @@ var config = {
             // var firstTrainConverted = moment(firstTrainTime, "HH:mm").subtract(1, "years");
             // console.log("first converted: " + firstTrainConverted);
             var nextTrain = "";
+            console.log(currentTime + " "+ dataTrainTime + "!!!!!!!____________________!!!!!!!!!");
 
             //show first train time if the current time is before the first train
-            if (currentTime.isBefore(firstTrainTime)) {
-                var nextTrain = firstTrainTime;
+            if (currentTime.isBefore(dataTrainTime, 'miliseconds')) {
+                console.log("true");
+                console.log(currentTime);
+                console.log(dataTrainTime);
+                var nextTrain = dataTrainTime;
             } else {
                 var nextTrain = frequencyMinutes.format("HH:mm");
             };
