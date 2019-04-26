@@ -75,6 +75,16 @@ var config = {
             var nextTrain = "";
             console.log(currentTime + " "+ dataTrainTime + "!!!!!!!____________________!!!!!!!!!");
 
+//      var maxMoment = moment.max(moment(), firsttrainTime); 
+//   // If the first train is later than the current time, sent arrival to the first train time
+//   if (maxMoment === trainTime) {
+//     tArrival = trainTime.format("hh:mm A");
+//   } else {
+//     // Calculate the minutes until arrival using hardcore math
+//    // use . diff to find the difference between the first scheduled train time and the next basically
+// }
+
+
             //show first train time if the current time is before the first train
             if (currentTime.isBefore(dataTrainTime, 'miliseconds')) {
                 console.log("true");
